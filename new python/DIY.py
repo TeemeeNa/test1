@@ -193,3 +193,10 @@ num1 = num.isdigit()
 
 while num1:
     if int(num) % 2 == 0:
+        print(num, "is even")
+        break
+    elif int(num) % 2 != 0:
+        print(num, "is odd")
+        break
+else:
+    print(num, "is not a number")

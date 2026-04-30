@@ -1,0 +1,17 @@
+nums = int(input())
+lis = []
+count = 1
+for i in range(nums):
+    A = int(input())
+    lis.append(A)
+lis.sort(reverse=True)
+print(lis)
+
+for j in range(nums):
+    if lis[j] > lis[j+1]:
+        lis = lis.remove(lis[j])
+    else:
+        count += 1
+        continue
+
+    

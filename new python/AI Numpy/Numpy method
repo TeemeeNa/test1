@@ -1,0 +1,45 @@
+import numpy as np
+
+--- 1. CREATION METHODS (การสร้าง Array) ---
+Create from list: np.array([1, 2, 3])
+All zeros: np.zeros((3, 3)) -> 3x3 table of 0.0
+All ones: np.ones((2, 4)) -> 2x4 table of 1.0
+Range of values: np.arange(0, 10, 2) -> [0, 2, 4, 6, 8]
+Evenly spaced: np.linspace(0, 1, 5) -> [0., 0.25, 0.5, 0.75, 1.]
+Random (0-1): np.random.rand(2, 2) -> 2x2 random floats
+Random integers: np.random.randint(1, 10, (3, 3)) -> 3x3 random ints 1-9
+
+--- 2. ATTRIBUTES (การเช็คคุณสมบัติ) ---
+arr.ndim    -> Number of dimensions (1D, 2D, etc.)
+arr.shape   -> Tuple of dimensions (rows, cols)
+arr.size    -> Total number of elements
+arr.dtype   -> Data type of elements (int64, float64)
+
+--- 3. SHAPE & REARRANGING (การเปลี่ยนรูปทรง) ---
+Change shape: arr.reshape(rows, cols) -> e.g., 1D(6) to 2D(2,3)
+Flatten to 1D: arr.flatten() -> converts any grid to a single line
+Transpose: arr.T or np.transpose(arr) -> flip rows and columns
+
+--- 4. CALCULATIONS (การคำนวณ) ---
+Basic Math: np.add(), np.subtract(), np.multiply(), np.divide()
+Summation: np.sum(arr) or arr.sum(axis=0) -> axis 0=cols, 1=rows
+Mean/Average: np.mean(arr)
+Min/Max: np.min(arr), np.max(arr)
+Index of Min/Max: np.argmin(arr), np.argmax(arr)
+Square root: np.sqrt(arr)
+Dot product: np.dot(arr1, arr2) -> Matrix multiplication
+
+--- 5. SEARCH & FILTER (การหาและคัดกรอง) ---
+Find indices: np.where(arr > 5) -> returns positions where condition is True
+Sort: np.sort(arr) -> returns sorted copy
+Unique values: np.unique(arr) -> returns list of items without duplicates
+
+--- 6. JOINING & SPLITTING (การรวมและการตัด) ---
+Stack vertical: np.vstack((a, b)) -> stack arrays on top of each other
+Stack horizontal: np.hstack((a, b)) -> stack arrays side-by-side
+Concatenate: np.concatenate((a, b), axis=0) -> general join function
+
+--- 7. EXAMPLES FOR PROJECTS ---
+Grid for game: grid = np.zeros((10, 10), dtype=int)
+Distance calculation: dist = np.sqrt(np.sum(np.square(p1 - p2)))
+Filtering data: clean_data = data[data > 0]

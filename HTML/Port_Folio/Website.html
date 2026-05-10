@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Academic & Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg_color: #fcfaf2;
+            --main_text: #2d2d2d;
+            --accent_color: #c5a47e;
+            --card_bg: #ffffff;
+            --line_color: #e5e5e5;
+        }
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: var(--bg_color);
+            color: var(--main_text);
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            line-height: 1.8;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(252, 250, 242, 0.9);
+            border-bottom: 1px solid var(--line_color);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--main_text);
+            font-weight: 400;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--accent_color); }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header_sec {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 0;
+        }
+        .prof_img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--card_bg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        h1 { font-size: 2.5rem; margin: 0; color: var(--main_text); }
+        .gpa_tag {
+            font-size: 1.2rem;
+            color: var(--accent_color);
+            font-weight: 600;
+        }
+
+        section { margin-bottom: 80px; }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent_color);
+            padding-left: 15px;
+        }
+
+        .grid_layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .card_item {
+            background: var(--card_bg);
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--line_color);
+            transition: 0.4s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card_item:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent_color);
+        }
+        .card_item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+
+        .skill_bar {
+            background: var(--line_color);
+            height: 8px;
+            border-radius: 4px;
+            margin: 10px 0 20px;
+        }
+        .skill_fill {
+            background: var(--accent_color);
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .timeline_item {
+            border-left: 2px solid var(--accent_color);
+            padding-left: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .timeline_item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--accent_color);
+            border-radius: 50%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--line_color);
+            color: var(--sub);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#about">ข้อมูลส่วนตัว</a>
+    <a href="#goals">เป้าหมาย</a>
+    <a href="#stats">การเรียน</a>
+    <a href="#work">ผลงาน</a>
+    <a href="#personal">โปรเจกต์ส่วนตัว</a>
+</nav>
+
+<div class="container">
+    
+    <section id="about" class="header_sec">
+        <img src="profile.jpg" class="prof_img" alt="My Profile">
+        <div>
+            <h1>[ชื่อ-นามสกุล ของคุณ]</h1>
+            <p class="gpa_tag">GPAX: 3.95 | นักเรียนสายวิทย์-คณิต</p>
+            <p>มุ่งมั่นในการเรียนรู้เทคโนโลยีสมัยใหม่และการแก้ปัญหาด้วยระบบอัตโนมัติ</p>
+        </div>
+    </section>
+
+    <section id="goals">
+        <h2>จุดประสงค์และความถนัด</h2>
+        <div class="grid_layout">
+            <div class="card_item">
+                <h3>ทำไมต้องวิศวกรรมคอมฯ?</h3>
+                <p>จากการคลุกคลีกับบอร์ด Arduino และการทำ YouTube ผมเห็นศักยภาพของการสร้างเครื่องมือที่ตอบโจทย์ผู้คนในวงกว้าง</p>
+            </div>
+            <div class="card_item">
+                <h3>ทักษะที่เชี่ยวชาญ</h3>
+                <div>Python / Luau</div>
+                <div class="skill_bar"><div class="skill_fill" style="width: 90%;"></div></div>
+                <div>Electronics (ESP32/Arduino)</div>
+                <div class="skill_bar"><div class="skill_fill" style="width: 85%;"></div></div>
+                <div>Full-stack (HTML/CSS/JS)</div>
+                <div class="skill_bar"><div class="skill_fill" style="width: 70%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <h2>ผลการเรียนและคะแนนทดสอบ</h2>
+        <div class="grid_layout">
+            <div class="timeline_item">
+                <h3>วิชาเด่น</h3>
+                <p>คณิตศาสตร์, ฟิสิกส์, วิทยาการคำนวณ (เกรด 4 ทุกวิชา)</p>
+            </div>
+            <div class="timeline_item">
+                <h3>Standardized Tests</h3>
+                <p>SAT Math: [ระบุ] | IELTS Target: 6.5+</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>กิจกรรมและผลงานวิชาการ</h2>
+        <div class="grid_layout">
+            <div class="card_item">
+                <img src="youtube.jpg" alt="YouTube">
+                <h3>Content Creation</h3>
+                <p>YouTube 27,000+ Subs (High Retention Editing)</p>
+            </div>
+            <div class="card_item">
+                <img src="academic.jpg" alt="Academic">
+                <h3>สอวน. และงานวิชาการ</h3>
+                <p>การแข่งขันและเกียรติบัตรด้านคอมพิวเตอร์</p>
+            </div>
+            <div class="card_item">
+                <img src="volunteer.jpg" alt="Volunteer">
+                <h3>กิจกรรมอาสา</h3>
+                <p>การช่วยเหลือสังคมและการทำงานร่วมกับผู้อื่น</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="personal">
+        <h2>รายละเอียดโปรเจกต์ส่วนตัว</h2>
+        <div class="card_item" style="margin-bottom: 20px;">
+            <h3>Smart Glasses for the Visually Impaired</h3>
+            <p><strong>วัตถุประสงค์:</strong> ลดอุบัติเหตุในการเดินของผู้พิการทางสายตา</p>
+            <p><strong>ปัญหา:</strong> เซนเซอร์อ่านค่าผิดพลาดเมื่อเจอวัตถุโปร่งใส</p>
+            <p><strong>การแก้ปัญหา:</strong> เพิ่มเซนเซอร์ IR เพื่อช่วยตรวจจับควบคู่กับ Ultrasonic และปรับ Code Buffer</p>
+        </div>
+        <div class="card_item">
+            <h3>Automated Coin Sorter System</h3>
+            <p><strong>วัตถุประสงค์:</strong> ประหยัดเวลาการนับเหรียญสำหรับธุรกิจ SME</p>
+            <p><strong>การทำงาน:</strong> ใช้กลไกทางกลร่วมกับ Sensor เพื่อนับจำนวนเงินแบบ Real-time</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 Designed by [ชื่อของคุณ] | Aspiring Full-Stack Developer
+</footer>
+
+</body>
+</html>

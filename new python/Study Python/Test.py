@@ -367,3 +367,20 @@ import numbers
 #                state="NY",
 #                zip="10600",
 #                pobox="PO box #1001")
+
+Count = 0
+if Count == 0:
+    PW = input("Enter your first password:")
+    Count += 1
+Running = True
+
+while Running:
+    PW2 = input("Enter your password again:")
+    if PW2 == PW:
+        COR = input("Correct (C = Change password)")
+        if COR.lower() == "c":
+            PW = input("Enter your new password:")
+    if PW2 == "exit":
+        Running = False
+    
+
